@@ -10,7 +10,7 @@ import styles from '../styles';
 export default function GameScreen({ route, navigation }) {
   const { difficulty } = route.params;
   const [score, setScore] = useState(0);
-  
+
   console.log('Difficulty before passing to PythagoreanTable:', difficulty);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function GameScreen({ route, navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>SmartyKid</Text>
+      <Text style={styles.title}>PythagApp</Text>
       <Timer difficulty={difficulty} />
       <PythagoreanTable difficulty={difficulty} setScore={setScore} />
       <Score score={score} />
